@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        /* Custom CSS */
+
+        /* Navbar styling */
+        .navbar {
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            background-color: #343a40; /* Dark navbar background */
+            position: sticky;
+            top: 0;
+            z-index: 1020; /* Ensures navbar is on top of other elements */
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* White text color */
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important; /* White text color for brand */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="currentColor" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/></svg>');
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important; /* Blue color on hover */
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #007bff !important; /* Blue color for active link */
+        }
+
+        .navbar-dark .navbar-toggler {
+            border-color: #ffffff; /* White border for toggler */
+        }
+
+        /* Home Section styling */
+        .custom-bold {
+            font-weight: bold;
+        }
+        header#home {
+            background: #007bff; /* Blue background */
+            color: white;
+            padding: 80px 0; /* Adjust padding for a better look */
+        }
+
+        /* Services Section styling */
+        .card {
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer styling */
+        footer {
+            background: #343a40;
+            color: #ffffff;
+        }
+
+        .social-icons a {
+    font-size: 1.3rem;
+    color: white;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover, adjust to match your theme */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .custom-bold {
+            font-weight: 700; /* or any other custom weight */
+        }
+        .btn-light {
+            color: #343a40; /* Dark text color for contrast */
+            background-color: #ffffff; /* Light background color */
+            border-color: #ffffff; /* Matching border color */
+        }
+        .btn-light:hover {
+            background-color: #e2e6ea; /* Slightly darker on hover */
+            border-color: #d3d9df; /* Matching border color on hover */
+        }
+        .object-cover {
+            object-fit: cover; /* Ensures the image covers the entire area */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">StateBankOfIndia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                 <!-- New Navbar Items -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="userregister.jsp">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.jsp">Login</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="admin_login.jsp">Adminlogin</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home" class="text-white text-center py-5 bg-primary">
+        <div class="container">
+            <h1 class="display-4 mb-4">
+                Welcome to <span class="text-danger fw-bold custom-bold">State Bank Of India</span>
+            </h1>
+            <p class="lead mb-4">Your trusted partner in financial services.</p>
+            <a href="#services" class="btn btn-light btn-lg">Explore Our Services</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div class="card border-0 shadow-lg text-center rounded">
+                        <div class="card-body p-4">
+                            <div class="icon-container mb-3">
+                                <i class="fas fa-user-tie fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title mb-3">Personal Banking</h5>
+                            <p class="card-text">Manage your personal accounts and transactions with ease. Enjoy tailored services to suit your financial needs.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div class="card border-0 shadow-lg text-center rounded">
+                        <div class="card-body p-4">
+                            <div class="icon-container mb-3">
+                                <i class="fas fa-briefcase fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title mb-3">Business Banking</h5>
+                            <p class="card-text">Solutions tailored for business accounts and transactions. Optimize your business finances with our specialized services.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div class="card border-0 shadow-lg text-center rounded">
+                        <div class="card-body p-4">
+                            <div class="icon-container mb-3">
+                                <i class="fas fa-laptop fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title mb-3">Online Services</h5>
+                            <p class="card-text">Access your accounts and services from anywhere. Enjoy seamless online banking with advanced features and security.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p class="text-center lead mb-4">Building trust, empowering growth, and enhancing lives through innovative banking solutions.</p>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card shadow-sm border-light">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Our Mission</h4>
+                            <p class="card-text">At BankingApp, our mission is to provide our customers with the highest quality of financial services, while upholding the highest standards of integrity and customer satisfaction. We strive to make banking convenient, secure, and accessible to all, fostering financial stability and growth for individuals and businesses alike.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-light">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Our Vision</h4>
+                            <p class="card-text">Our vision is to be a leading financial institution recognized for excellence in customer service, innovation, and social responsibility. We aim to empower our customers with the tools and knowledge to make informed financial decisions, driving economic progress and improving quality of life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="text-center lead mb-4">We would love to hear from you! Get in touch with us for any inquiries or support.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-light mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Head Office</h4>
+                            <p class="card-text"><i class="fas fa-map-marker-alt text-primary"></i> 123 Dilsukhnagar Branch, Hyderabad, India</p>
+                            <p class="card-text"><i class="fas fa-phone-alt text-primary "></i> +123 456 7890</p>
+                            <p class="card-text"><i class="fas fa-envelope text-primary "></i> info@sbi.com</p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm border-light">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Customer Support</h4>
+                            <p class="card-text"><i class="fas fa-phone-alt text-primary"></i> +123 456 7891</p>
+                            <p class="card-text"><i class="fas fa-envelope text-primary"></i> support@sbi.com</p>
+                            <p class="card-text"><i class="fas fa-comments text-primary"></i> Live Chat Available 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Contact Form -->
+                    <div class="card shadow-sm border-light">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Send Us a Message</h4>
+                            <form action="contact_proccess.jsp" method="post">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" name="message" placeholder="Type your message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+<footer class="py-3 my-3">
+    <div class="container-fuild text-center">
+        <div class="row">
+        <div class="col-md-6">
+        <p class="mb-2">&copy; 2024 BankingApp. All Rights Reserved.</p>
+    </div>
+
+        <div class="social-icons col-md-6">
+            <a href="https://www.facebook.com" target="_blank" class="mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="mx-2">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
